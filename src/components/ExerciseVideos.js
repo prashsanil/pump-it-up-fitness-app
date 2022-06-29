@@ -1,10 +1,12 @@
 import React from 'react';
 import { Box, Stack, Typography } from '@mui/material';
 
+import Loader from './Loader';
+
 const ExerciseVideos = ({ exerciseVideos, name}) => {
-  console.log(exerciseVideos);
   
-  if(!exerciseVideos.length) return 'Loading...';
+  //check if there are videos on the exercise
+  if(!exerciseVideos.length) return <Loader />;
 
   return (
     <Box sx={{
