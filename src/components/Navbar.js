@@ -1,13 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Stack } from '@mui/material';
+import { Box, Stack } from '@mui/material';
 
-import Logo from '../assets/images/Logo.png';
+import Logo from '../assets/images/Logo-11.png';
 
 const Navbar = () => (
   <Stack direction="row" justifyContent="space-around" sx={{ gap: { sm: '123px', xs: '40px' }, mt: { sm: '32px', xs: '20px' }, justifyContent: 'none' }} px="20px">
     <Link to="/">
-      <img src={Logo} alt="logo" style={{ width: '48px', height: '48px', margin: '0px 20px' }} />
+    <Box component="img"
+      sx={{
+        width: {md: '120px', sm: '100px', xs: '70px'}, 
+        height: {md: '50px', sm: '45px', xs: '30px'}, 
+        margin: {lg: '0px 20px'}
+      }}
+      src={Logo} 
+      alt="logo" />
+      {/* <img src={Logo} alt="logo" style={{ width: '120px', height: '50px', margin: '0px 20px'}} /> */}
     </Link>
     <Stack
       direction="row"
